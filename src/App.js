@@ -1,24 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+
+import SettingSearchBar from './SettingSearchBar';
+import SettingGallery from './SettingGallery';
+import SettingFooter from './SettingFooter';
+
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: [
+      'Monospace',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif'
+    ].join(','),
+  }
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <ThemeProvider theme={theme}>
+    <div className="container">
+        <div className="title">
+            <h1><span className="blink">_</span>the settings agency</h1>
+        </div>
+        <div className="tagline">
+            <h4>unified heroes and lore across various mediums</h4>
+        </div>
+        <div className="gallery">
+            <SettingGallery />
+        </div>
+        <div className="aboutus">
+            <SettingFooter />
+        </div>
+        <div className="search-bar">
+            <SettingSearchBar />
+        </div>
     </div>
+  </ThemeProvider>
   );
 }
 
