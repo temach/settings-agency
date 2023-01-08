@@ -4,7 +4,8 @@ import Autocomplete from '@mui/material/Autocomplete';
 
 const autocompleteStyle = {
   minWidth: '50vw',
-  backgroundColor: 'white'
+  backgroundColor: 'white',
+  position: "sticky",
 };
 
 const completeOptions = [
@@ -49,7 +50,7 @@ function SettingSearchBar() {
         renderInput={(params) => (
           <TextField
             {...params}
-            label="Enter filter"
+            label=""
             variant="outlined"
             fullWidth
           />

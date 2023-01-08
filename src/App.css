@@ -18,11 +18,11 @@
 
 
 .search-bar {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 90%;
+  position: sticky;
+  top: 10px;
+  left: 2%;
+  width: 99%;
+  z-index: 10;
 }
 
 body {

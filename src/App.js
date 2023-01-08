@@ -29,13 +29,13 @@ function App() {
             <h4>unified heroes and lore across various mediums</h4>
         </div>
         <div className="gallery">
+            <div className="search-bar">
+                <SettingSearchBar />
+            </div>
             <SettingGallery />
         </div>
         <div className="aboutus">
             <SettingFooter />
-        </div>
-        <div className="search-bar">
-            <SettingSearchBar />
         </div>
     </div>
   </ThemeProvider>
